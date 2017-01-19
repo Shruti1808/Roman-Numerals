@@ -23,8 +23,8 @@ The program converts the numbers 2-3 and 6-8 into Roman Numerals.
 * Example Output: III
 
 The program converts the numbers 4 and 9 into Roman Numerals.
-* Example Input: 3
-* Example Output: III
+* Example Input: 4
+* Example Output: IV
 
 The program converts the numbers 11 to 39 into Roman Numerals.
 * Example Input: 39
