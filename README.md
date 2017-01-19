@@ -18,22 +18,35 @@ The program converts the number 1, 5, 10, 50, 100, 500, 1,000 into Roman Numeral
 * Example Input: 5
 * Example Output: v
 
-The program converts the numbers 2-3 and 6-8 into Roman Numerals.
+The program converts the number in the ones column that equals 2-3 and 6-8 into Roman Numerals.
 * Example Input: 3
 * Example Output: III
 
-The program converts the numbers 4 and 9 into Roman Numerals.
+The program converts the number in the ones column that equals 4 and 9 into Roman Numerals.
 * Example Input: 4
 * Example Output: IV
 
-The program converts the numbers 11 to 39 into Roman Numerals.
-* Example Input: 39
-* Example Output: XXIX
+The program converts the number in the tens column into Roman Numerals.
+* Example Input: 30
+* Example Output: XXX
+
+The program converts the number in the hundreds column into Roman Numerals.
+* Example Input: 300
+* Example Output: CCC
+
+The program converts the number in the thousands column into Roman Numerals.
+* Example Input: 3000
+* Example Output: MMM
+
+The program then combines the results from the thousands, hundreds, tens, and ones column to display the output
+* Example Input: 333
+* Example Output: CCCXXXIII
 
 ## Setup/Installation Requirements
 
 * _Clone the GitHub repository_
 * _Open it in a browser of your choice_
+* _Try converting numbers into their Roman Numerals_
 
 ## Known Bugs
 
