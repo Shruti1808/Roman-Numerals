@@ -24,7 +24,12 @@ var romanNumeral = function(aNumber) {
       ones= "I".repeat(digitArray[digitArray.length-1]);
     } else if (digitArray[digitArray.length-1] >= 5 && digitArray[digitArray.length-1] < 9){
       ones = "V" + "I".repeat(digitArray[digitArray.length-1]- 5);
-    };
+    }
+    else if (digitArray[digitArray.length-1]==4){
+      ones = "IV";
+    }else if (digitArray[digitArray.length-1]==9) {
+      ones = "IX";
+    }
     return ones;
   };
 
@@ -33,7 +38,11 @@ var romanNumeral = function(aNumber) {
       tens= "X".repeat(digitArray[digitArray.length-2]);
     }else if (digitArray[digitArray.length-2]>=5 && digitArray[digitArray.length-2]<9){
       tens = "L"+ "X".repeat(digitArray[digitArray.length-2]-5);
-    };
+    }else if (digitArray[digitArray.length-2]==4){
+      tens = "XL";
+    }else if (digitArray[digitArray.length-2]==9) {
+      tens = "XC";
+    }
     return tens;
   };
 
@@ -43,16 +52,24 @@ var romanNumeral = function(aNumber) {
 
     }else if (digitArray[digitArray.length-3]>=5 && digitArray[digitArray.length-3]<9) {
       hundreds = "D" + "C".repeat(digitArray[digitArray.length-3]-5);
-    };
-    return hundreds
+    }else if (digitArray[digitArray.length-3]==4){
+      hundreds = "CD";
+    }else if (digitArray[digitArray.length-3]==9) {
+      hundreds = "CM";
+    }
+    return hundreds;
   };
 
   var convertThousands = function(digitArray) {
-    thousands = "M".repeat(digitArray[0]);
-    return thousands
+    thousands = "M".repeat(digitArray[digitArray.length-4]);
+    return thousands;
   }
 
-  return convertThousands(digitArray) + convertHundreds(digitArray) + convertTens(digitArray) + convertOnes(digitArray);
+  if (parseInt(aNumber) < 4000) {
+    return convertThousands(digitArray) + convertHundreds(digitArray) + convertTens(digitArray) + convertOnes(digitArray);
+  } else {
+    return "Please enter a number less than 4000";
+  }
 };
 
 
